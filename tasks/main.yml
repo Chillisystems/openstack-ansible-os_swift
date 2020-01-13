@@ -146,7 +146,7 @@
 - include_tasks: swift_service_setup.yml
   when:
     - "swift_do_setup | bool"
-    - '"keystoneauth" in swift_middleware_list'
+#    - '"keystoneauth" in swift_middleware_list'
     - "inventory_hostname == ((groups['swift_all'] | intersect(ansible_play_hosts)) | list)[0]"
   tags:
     - swift-config
